@@ -1,49 +1,33 @@
-# circuit_analysis
+# circuit analysis: PyZero modeling tutorial
 
-Circuit analysis for making a resonant gain circuit for PDH locking.
-Currently working on analyzing passive and active circuits
+The goal of this is to have an easier way to compare a PyZero model with SR785 data.
+Check my [github](https://github.com/ninoc0/PyZero-Modeling/tree/main) for updates on the modeling.
 
 ## Instructions
+1. Follow the main circuit_analysis instructions and install the environment
 
-### `interactivefitter_resg_tf.py`
+2. How to use this code yourself
 
-These are the instructions to get `interactivefitter_resg_tf.py` working.
+To use this code you're going to need to do 2 things. First of all create a .txt file in the directory that has all of this code. Look at example_nodes.txt as a general example, but you'll want to made a text file with a node list.
+```
+r r1 1k n1 n2
+```
+The first letter indicates the type(r for resistor, c for capacitor l for inductor, and op for opamp). The next is the name of the component. In the case of the opamp, next is the type(for example AD829), in the case of other components, next is the value. Then list out the nodes you want to connect the component to.
+```
+freq 1 5 100
+```
+Then you have the frequency response. This shows a response from 10^1 to 10^5, with 100 data points.
+```
+test n1 n8
+```
+Finally, indicate the input and output. Save this txt file in your directory(as well as your text file from your SR785 data) and then open PyZeroFitting.py.
 
-1. Make sure you have `conda`
+3. How to run it 
 ```
-which conda
+python PyZeroFitting.py /home/input_node_file.txt /home/data_file.txt
 ```
-2. `git clone` InteractiveFitter at https://git.ligo.org/gabriele-vajente/interactivefitting
-Make sure to `cd` into a convenient directory before you do this.
-I like to put git repos in my `~/Git/` folder; you may have to modify this:
+This will produce your fitted model as well as residual plots.
 ```
-cd ~/Git/
-git clone git@git.ligo.org:gabriele-vajente/interactivefitting.git
+python PyZeroFitting.py /home/input_node_file.txt --plot-pyzero
 ```
-
-3. `cd` back to the top of this directory (i.e. where this `README.md` is):
-```
-cd ~/Git/circuit_analysis
-```
-
-4. Create the Anaconda environment named `circuit`, which hosts all the dependencies required for this repo
-**WARNING: this will only work for a Linux Machine, because one dependency, `python-foton` only works for Linux**
-```
-conda env create -f environment_linux.yml
-``` 
-
-5. Activate the environment:
-```
-conda activate circuit
-```
-You should see `(circuit)` of the far left side of your terminal prompt.
-
-6. Open the python code in `code/interactivefitter_resg_tf.py`, and ensure that the `sys.path.append(path)` is pointing to the correct location on your machine for where you `git clone`'d the `interactivefitting` repo.
-
-7. Run the code in your new `(circuit)` environment
-```
-python code/interactivefitter_resg_tf.py
-```
-
-You should see a `pyqt5` window open that looks like this:
-![pic_from_running_interactivefitting_resg_tf](figures/pic_from_running_interactivefitting_resg_tf.png)
+This will produce just the pyzero model(so use this if you dont have data).
