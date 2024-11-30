@@ -1,0 +1,15 @@
+op op1 ad829 n4 n3 n5
+r r1 1k n1 n3
+r r2 1k n3 n5
+r r3 1k gnd n4
+c c1 5p n3 n5
+c c2 5p gnd n4
+op op2 ad829 gnd n7 n8
+r r5 100k n5 n7
+r r6 1k n5 n6
+r r7 1k n7 n8
+c c5 2.2n n6 n7
+c c6 5p n7 n8
+freq 1 5 100
+test n1 n8
+
