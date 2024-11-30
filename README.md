@@ -1,8 +1,5 @@
 # circuit analysis: PyZero modeling tutorial
 
-The goal of this is to have an easier way to compare a PyZero model with SR785 data.
-Check my [github](https://github.com/ninoc0/PyZero-Modeling/tree/main) for updates on the modeling.
-
 ## Instructions
 1. Follow the main circuit_analysis instructions and install the environment
 
