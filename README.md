@@ -1,9 +1,24 @@
 # circuit analysis: PyZero modeling tutorial
 
 ## Instructions
-1. Follow the main circuit_analysis instructions and install the environment
+1. Make sure you have `conda`
+```
+which conda
+```
 
-2. How to use this code yourself
+2. Create the Anaconda environment named `circuit`, which hosts all the dependencies required for this repo
+**WARNING: this will only work for a Linux Machine, because one dependency, `python-foton` only works for Linux**
+```
+conda env create -f environment_linux.yml
+```
+
+3. Activate the environment:
+```
+conda activate circuit
+```
+You should see `(circuit)` of the far left side of your terminal prompt.
+
+4. How to use this code yourself
 
 To use this code you're going to need to do 2 things. First of all create a .txt file in the directory that has all of this code. Look at example_nodes.txt as a general example, but you'll want to made a text file with a node list.
 ```
@@ -19,7 +34,7 @@ test n1 n8
 ```
 Finally, indicate the input and output. Save this txt file in your directory(as well as your text file from your SR785 data) and then open PyZeroFitting.py.
 
-3. How to run it 
+5. How to run it 
 ```
 python PyZeroFitting.py /home/input_node_file.txt /home/data_file.txt
 ```
