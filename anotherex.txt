@@ -1,0 +1,39 @@
+## this is the qpd board from the ligo dcc diagram
+## op amps:
+
+op u1a lt1124 gnd n1 n2
+r r1 200k n1 n2
+c c1 10p n1 n2
+
+op u1b lt1124 n2 n3 n5
+r r2 1k n3 n4
+c c2 2.2u n4 gnd
+r r3 30k n3 n5
+c c3 50p n3 n5
+
+## currently n5 is the output of the qpd and input of the line driver!!! change anywhere it 
+## n5 to your new output(change r4, r5, and n6) !!!
+
+## this is the DRV135, taken from data sheet
+op a1 op00 gnd n6 n9
+r r4 30k n5 n6
+r r5 30k n5 n7
+r r6 30k n5 n8
+r r7 30k n6 n9
+r r8 30k n9 n10
+r r9 30k n9 n11
+r r10 30k n10 n12
+r r11 30k n11 n13
+r r12 10k n13 gnd
+r r13 30k n7 n14
+r r14 10k n14 gnd
+r r15 50 n15 n16
+r r16 50 n12 n17
+r r17 30k n8 n15
+
+op a2 op00 n7 n10 n12
+op a3 op00 n11 n8 n15
+
+# n16 is the +Vout and n17 is the -Vout
+freq 1 5 256
+test n1 n5
