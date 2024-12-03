@@ -9,7 +9,7 @@ which conda
 cd path/you/want/repo
 ```
 
-2. Create the Anaconda environment named `circuit`, which hosts all the dependencies required for this repo
+2. Create the Anaconda environment, which hosts all the dependencies required for this repo. This environment is call `pyzero_env`.
 **WARNING: this will only work for a Linux Machine, because one dependency, `python-foton` only works for Linux**
 ```
 conda env create -f environment_linux.yml
