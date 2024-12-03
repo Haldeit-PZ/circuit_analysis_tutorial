@@ -50,5 +50,6 @@ test n1 n8
 python PyZeroFitting.py /home/input_node_file.txt --plot_pyzero
 ```
 You can then save the figure as a png file.
+
 2. You can plot other things as well. Use `-h` to see all options for plotting, such as bode plots and noise plots. 
  
