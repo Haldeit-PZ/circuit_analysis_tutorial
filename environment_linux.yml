@@ -1,4 +1,4 @@
-name: circuit
+name: pyzero_env
 channels:
   - conda-forge
   - defaults
