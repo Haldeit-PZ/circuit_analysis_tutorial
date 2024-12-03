@@ -1,0 +1,20 @@
+name: circuit
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - numpy
+  - scipy
+  - matplotlib
+  - gpstime
+  - pip
+  - ipython
+  - pandas
+  - tqdm 
+  - python-foton
+  - pyqtgraph
+  - openpyxl 
+  - pip:
+      - PyPDF2
+      - Zero
