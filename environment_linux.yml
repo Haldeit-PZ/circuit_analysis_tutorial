@@ -17,4 +17,4 @@ dependencies:
   - openpyxl 
   - pip:
       - PyPDF2
-      - Zero
+      - zero
