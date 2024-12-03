@@ -17,7 +17,7 @@ conda env create -f environment_linux.yml
 
 3. Activate the environment:
 ```
-conda activate circuit
+conda activate pyzero_env
 ```
 You should see `(circuit)` of the far left side of your terminal prompt.
 
