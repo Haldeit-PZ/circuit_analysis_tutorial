@@ -19,7 +19,7 @@ conda env create -f environment_linux.yml
 ```
 conda activate pyzero_env
 ```
-You should see `(circuit)` of the far left side of your terminal prompt.
+You should see `(pyzero_env)` of the far left side of your terminal prompt.
 
 ## Creating The Text File
 
