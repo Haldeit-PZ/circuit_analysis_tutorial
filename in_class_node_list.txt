@@ -1,0 +1,5 @@
+r r1 1k n1 n2
+c c1 1n n2 gnd
+
+freq 3 7 800
+test n1 n2
