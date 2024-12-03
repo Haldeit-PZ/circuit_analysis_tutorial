@@ -1,9 +1,12 @@
 # circuit analysis: PyZero modeling tutorial
 
 ## Instructions
-1. Make sure you have `conda`
+1.  Make sure you have `conda`, then navigate to where you want the repo.
 ```
 which conda
+```
+```
+cd path/you/want/repo
 ```
 
 2. Create the Anaconda environment named `circuit`, which hosts all the dependencies required for this repo
